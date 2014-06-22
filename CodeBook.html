@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title></title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<p>As described in the <a href="https://class.coursera.org/getdata-004/forum/thread?thread_id=261">course forums</a>, for all the variables, the data has been divided by its range (gyroscope, entropy, etc) to normalise it, so numerical values are unitless.</p>
+
+<ol>
+<li><p>subject - a number 1-30 indicating the subject of the observation</p></li>
+<li><p>activity - indicates the activity for the observation, from one of these 6 values:</p>
+
+<pre><code>* WALKING
+
+* WALKING_UPSTAIRS
+
+* WALKING_DOWNSTAIRS
+
+* SITTING
+
+* STANDING
+
+* LAYING
+</code></pre></li>
+<li><p>TimeBodyAcc_MEAN_X - Mean body acceleration along the x-axis </p></li>
+<li><p>TimeBodyAcc_MEAN_Y - Mean body acceleration along the y-axis </p></li>
+<li><p>TimeBodyAcc_MEAN_Z - Mean body acceleration along the x-axis </p></li>
+<li><p>TimeBodyAcc_STD_X - Standard deviation of body acceleration along the x-axis </p></li>
+<li><p>TimeBodyAcc_STD_Y - Standard deviation of body acceleration along the y-axis </p></li>
+<li><p>TimeBodyAcc_STD_Z - Standard deviation of body acceleration along the z-axis </p></li>
+<li><p>TimeGravityAcc_MEAN_X - Mean gravity acceleration along the x-axis</p></li>
+<li><p>TimeGravityAcc_MEAN_Y - Mean gravity acceleration along the y-axis</p></li>
+<li><p>TimeGravityAcc_MEAN_Z - Mean gravity acceleration along the z-axis</p></li>
+<li><p>TimeGravityAcc_STD_X - Standard deviation of gravity acceleration along the x-axis</p></li>
+<li><p>TimeGravityAcc_STD_Y - Standard deviation of gravity acceleration along the y-axis</p></li>
+<li><p>TimeGravityAcc_STD_Z - Standard deviation of gravity acceleration along the z-axis</p></li>
+<li><p>TimeBodyAccJerk_MEAN_X - Mean body jerks along the x-axis </p></li>
+<li><p>TimeBodyAccJerk_MEAN_Y - Mean body jerks along the y-axis </p></li>
+<li><p>TimeBodyAccJerk_MEAN_Z - Mean body jerks along the z-axis </p></li>
+<li><p>TimeBodyAccJerk_STD_X - Standard deviation of body jerks along the x-axis </p></li>
+<li><p>TimeBodyAccJerk_STD_Y - Standard deviation of body jerks along the y-axis</p></li>
+<li><p>TimeBodyAccJerk_STD_Z - Standard deviation of body jerks along the z-axis</p></li>
+<li><p>TimeBodyGyro_MEAN_X - Mean of gyroscopic body acceleration along the x-axis</p></li>
+<li><p>TimeBodyGyro_MEAN_Y - Mean of gyroscopic body acceleration along the y-axis</p></li>
+<li><p>TimeBodyGyro_MEAN_Z - Mean of gyroscopic body acceleration along the z-axis</p></li>
+<li><p>TimeBodyGyro_STD_X - Standard deviation of gyroscopic body acceleration along the x-axis</p></li>
+<li><p>TimeBodyGyro_STD_Y - Standard deviation of gyroscopic body acceleration along the y-axis</p></li>
+<li><p>TimeBodyGyro_STD_Z - Standard deviation of gyroscopic body acceleration along the z-axis</p></li>
+<li><p>TimeBodyGyroJerk_MEAN_X - Mean of gyroscopic body jerks along the x-axis</p></li>
+<li><p>TimeBodyGyroJerk_MEAN_Y - Mean of gyroscopic body jerks along the y-axis</p></li>
+<li><p>TimeBodyGyroJerk_MEAN_Z - Mean of gyroscopic body jerks along the z-axis</p></li>
+<li><p>TimeBodyGyroJerk_STD_X - Standard deviation of gyroscopic body jerks along the x-axis</p></li>
+<li><p>TimeBodyGyroJerk_STD_Y - Standard deviation of gyroscopic body jerks along the y-axis</p></li>
+<li><p>TimeBodyGyroJerk_STD_Z - Standard deviation of gyroscopic body jerks along the z-axis</p></li>
+<li><p>TimeBodyAccMag_MEAN - Mean magnitude of body acceleration</p></li>
+<li><p>TimeBodyAccMag_STD - Standard deviation of magnitude of body acceleration</p></li>
+<li><p>TimeGravityAccMag_MEAN - Mean magnitude of grvity acceleration</p></li>
+<li><p>TimeGravityAccMag_STD - Standard deviation of magnitude of gravity acceleration</p></li>
+<li><p>TimeBodyAccJerkMag_MEAN - Mean magnitude of body jerks</p></li>
+<li><p>TimeBodyAccJerkMag_STD - Standard deviation of magnitude of gravity jerks</p></li>
+<li><p>TimeBodyGyroMag_MEAN - Mean magnitude of gyroscopic body acceleration</p></li>
+<li><p>TimeBodyGyroMag_STD - Standard deviation of magnitude of gyroscopic body acceleration</p></li>
+<li><p>TimeBodyGyroJerkMag_MEAN - Mean magnitude of gyroscopic body jerks</p></li>
+<li><p>TimeBodyGyroJerkMag_STD - Standard deviation of magnitude of gyroscopic body jerks</p></li>
+<li><p>FreqBodyAcc_MEAN_X - Frequency domain mean body acceleration along the x-axis </p></li>
+<li><p>FreqBodyAcc_MEAN_Y - Frequency domain mean body acceleration along the y-axis </p></li>
+<li><p>FreqBodyAcc_MEAN_Z - Frequency domain mean body acceleration along the z-axis </p></li>
+<li><p>FreqBodyAcc_STD_X - Frequency domain standard deviation of body acceleration along the x-axis</p></li>
+<li><p>FreqBodyAcc_STD_Y - Frequency domain standard deviation of body acceleration along the y-axis</p></li>
+<li><p>FreqBodyAcc_STD_Z - Frequency domain standard deviation of body acceleration along the z-axis</p></li>
+<li><p>FreqBodyAccJerk_MEAN_X - Frequency domain mean body jerks along the x-axis</p></li>
+<li><p>FreqBodyAccJerk_MEAN_Y - Frequency domain mean body jerks along the y-axis</p></li>
+<li><p>FreqBodyAccJerk_MEAN_Z - Frequency domain mean body jerks along the z-axis</p></li>
+<li><p>FreqBodyAccJerk_STD_X - Frequency domain standard deviation of body jerks along the x-axis</p></li>
+<li><p>FreqBodyAccJerk_STD_Y - Frequency domain standard deviation of body jerks along the y-axis</p></li>
+<li><p>FreqBodyAccJerk_STD_Z - Frequency domain standard deviation of body jerks along the z-axis</p></li>
+<li><p>FreqBodyGyro_MEAN_X - Frequency domain mean of gyroscopic body acceleration along the x-axis</p></li>
+<li><p>FreqBodyGyro_MEAN_Y - Frequency domain mean of gyroscopic body acceleration along the y-axis</p></li>
+<li><p>FreqBodyGyro_MEAN_Z - Frequency domain mean of gyroscopic body acceleration along the z-axis</p></li>
+<li><p>FreqBodyGyro_STD_X - Frequency domain standard deviation of gyroscopic body acceleration along the x-axis</p></li>
+<li><p>FreqBodyGyro_STD_Y - Frequency domain standard deviation of gyroscopic body acceleration along the y-axis</p></li>
+<li><p>FreqBodyGyro_STD_Z - Frequency domain standard deviation of gyroscopic body acceleration along the z-axis</p></li>
+<li><p>FreqBodyAccMag_MEAN - Frequency domain mean magnitude of body acceleration</p></li>
+<li><p>FreqBodyAccMag_STD - Frequency domain standard deviation of magnitude of body acceleration</p></li>
+<li><p>FreqBodyAccJerkMag_MEAN - Frequency domain mean magnitude of body jerks</p></li>
+<li><p>FreqBodyAccJerkMag_STD - Frequency domain standard deviation of magnitude of body jerks</p></li>
+<li><p>FreqBodyGyroMag_MEAN - Frequency domain mean magnitude of gyroscopic body acceleration</p></li>
+<li><p>FreqBodyGyroMag_STD - Frequency domain standard deviation of magnitude of gyroscopic body acceleration</p></li>
+<li><p>FreqBodyGyroJerkMag_MEAN - Frequency domain mean magnitude of gyroscopic body jerks</p></li>
+<li><p>FreqBodyGyroJerkMag_STD - Frequency domain standard deviation of magnitude of gyroscopic body jerks</p></li>
+</ol>
+
+</body>
+
+</html>
+
